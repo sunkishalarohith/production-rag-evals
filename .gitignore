@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+data/raw/
+*.faiss
+evals/results/*.tmp
+.DS_Store
+streamlit_app.log
+server.log
