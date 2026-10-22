@@ -1,0 +1,74 @@
+[
+  {
+    "config": "fixed+vector+base",
+    "chunker": "fixed",
+    "search": "vector",
+    "rerank": false,
+    "n_questions": 18,
+    "recall@5": 0.6667,
+    "recall@10": 0.8889,
+    "mrr@10": 0.3775,
+    "mean_latency_ms": 23.3
+  },
+  {
+    "config": "fixed+vector+rerank",
+    "chunker": "fixed",
+    "search": "vector",
+    "rerank": true,
+    "status": "not run: reranker model unavailable (OSError)"
+  },
+  {
+    "config": "fixed+hybrid+base",
+    "chunker": "fixed",
+    "search": "hybrid",
+    "rerank": false,
+    "n_questions": 18,
+    "recall@5": 0.8889,
+    "recall@10": 0.9444,
+    "mrr@10": 0.6713,
+    "mean_latency_ms": 19.7
+  },
+  {
+    "config": "fixed+hybrid+rerank",
+    "chunker": "fixed",
+    "search": "hybrid",
+    "rerank": true,
+    "status": "not run: reranker model unavailable (OSError)"
+  },
+  {
+    "config": "structure+vector+base",
+    "chunker": "structure",
+    "search": "vector",
+    "rerank": false,
+    "n_questions": 18,
+    "recall@5": 0.4444,
+    "recall@10": 0.6667,
+    "mrr@10": 0.3435,
+    "mean_latency_ms": 18.1
+  },
+  {
+    "config": "structure+vector+rerank",
+    "chunker": "structure",
+    "search": "vector",
+    "rerank": true,
+    "status": "not run: reranker model unavailable (OSError)"
+  },
+  {
+    "config": "structure+hybrid+base",
+    "chunker": "structure",
+    "search": "hybrid",
+    "rerank": false,
+    "n_questions": 18,
+    "recall@5": 0.9444,
+    "recall@10": 0.9444,
+    "mrr@10": 0.6333,
+    "mean_latency_ms": 31.7
+  },
+  {
+    "config": "structure+hybrid+rerank",
+    "chunker": "structure",
+    "search": "hybrid",
+    "rerank": true,
+    "status": "not run: reranker model unavailable (OSError)"
+  }
+]
