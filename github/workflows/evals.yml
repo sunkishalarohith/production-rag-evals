@@ -1,0 +1,33 @@
+name: evals
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  retrieval-evals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: python -m pytest tests/ -q
+
+      - name: Run retrieval evaluation grid
+        run: python -m evals.runner
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-results
+          path: |
+            evals/results/results.json
+            evals/results/results.md
